@@ -32,7 +32,7 @@ std::vector<FileDescriptorInfo::PtrT> ProcessInfo::getAllFileDescriptors()
             {
                 for (int i = 0; i <fd_count; i++)
                 {
-                    result.push_back(FileDescriptorInfo::PtrT(new FileDescriptorInfo(fds[i])));
+                    result.push_back(FileDescriptorInfo::PtrT(new FileDescriptorInfo(fds[i], getPid())));
                 }
             }
             free(fds);

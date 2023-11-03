@@ -12,6 +12,8 @@
 #include <memory>
 #include <libproc.h>
 
+#include "SocketFileDescriptorInfo.hpp"
+
 namespace libproccpp
 {
 
@@ -36,13 +38,16 @@ public:
     };
 
 
-    FileDescriptorInfo(struct proc_fdinfo aFdInfo);
+    FileDescriptorInfo(struct proc_fdinfo aFdInfo, pid_t aParentPid);
 
     FileDescriptorType getType();
+
     bool isSocket();
+    SocketFileDescriptorInfo::PtrT getSocketInfo();
 
 private:
-    struct proc_fdinfo _fdInfo;
+    struct proc_fdinfo  _fdInfo;
+    pid_t               _parentPid;
 };
 
 } // namespace libproccpp

@@ -19,16 +19,15 @@ int main(int argc, const char * argv[])
 
     for (libproccpp::ProcessInfo::PtrT procInfo: allPids)
     {
-        std::cout << "Process: " << procInfo->getPid() << std::endl;
-
         std::vector<libproccpp::FileDescriptorInfo::PtrT> fileDescriptors = procInfo->getAllFileDescriptors();
-        std::cout << "FileDescriptors: " << fileDescriptors.size() << std::endl;
-
         for (libproccpp::FileDescriptorInfo::PtrT fileDescriptorInfo: fileDescriptors)
         {
-            std::cout << "FileDescriptor isSocket: " << (fileDescriptorInfo->isSocket() ? "true" : "false")
-                << std::endl;
+            libproccpp::SocketFileDescriptorInfo::PtrT socketInfo = fileDescriptorInfo->getSocketInfo();
+            if (socketInfo)
+            {
+                std::cout << procInfo->getPid() << "\t" << "socket" << std::endl;
 
+            }
         }
     }
 
