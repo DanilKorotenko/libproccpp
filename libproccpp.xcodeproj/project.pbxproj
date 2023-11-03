@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DA3DBB8A2AF5060400AAD4B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3DBB892AF5060400AAD4B4 /* main.cpp */; };
 		DA3DBB902AF5062A00AAD4B4 /* libproccpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3DBB8E2AF5062A00AAD4B4 /* libproccpp.cpp */; };
+		DA4509522AF516B0000815B5 /* FileDescriptorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA4509502AF516B0000815B5 /* FileDescriptorInfo.cpp */; };
+		DA4509552AF518EA000815B5 /* ProcessInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA4509532AF518EA000815B5 /* ProcessInfo.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,10 @@
 		DA3DBB8E2AF5062A00AAD4B4 /* libproccpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = libproccpp.cpp; sourceTree = "<group>"; };
 		DA3DBB8F2AF5062A00AAD4B4 /* libproccpp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = libproccpp.hpp; sourceTree = "<group>"; };
 		DA4509382AF50CB8000815B5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DA4509502AF516B0000815B5 /* FileDescriptorInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileDescriptorInfo.cpp; sourceTree = "<group>"; };
+		DA4509512AF516B0000815B5 /* FileDescriptorInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileDescriptorInfo.hpp; sourceTree = "<group>"; };
+		DA4509532AF518EA000815B5 /* ProcessInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProcessInfo.cpp; sourceTree = "<group>"; };
+		DA4509542AF518EA000815B5 /* ProcessInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ProcessInfo.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,10 @@
 			children = (
 				DA3DBB8E2AF5062A00AAD4B4 /* libproccpp.cpp */,
 				DA3DBB8F2AF5062A00AAD4B4 /* libproccpp.hpp */,
+				DA4509502AF516B0000815B5 /* FileDescriptorInfo.cpp */,
+				DA4509512AF516B0000815B5 /* FileDescriptorInfo.hpp */,
+				DA4509532AF518EA000815B5 /* ProcessInfo.cpp */,
+				DA4509542AF518EA000815B5 /* ProcessInfo.hpp */,
 			);
 			path = libproccpp;
 			sourceTree = "<group>";
@@ -135,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3DBB8A2AF5060400AAD4B4 /* main.cpp in Sources */,
+				DA4509552AF518EA000815B5 /* ProcessInfo.cpp in Sources */,
+				DA4509522AF516B0000815B5 /* FileDescriptorInfo.cpp in Sources */,
 				DA3DBB902AF5062A00AAD4B4 /* libproccpp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

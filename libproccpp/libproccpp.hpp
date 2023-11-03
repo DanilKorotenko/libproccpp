@@ -10,11 +10,13 @@
 
 #include <stdio.h>
 #include <vector>
+#include "ProcessInfo.hpp"
 
 namespace libproccpp
 {
 
-std::vector<pid_t> getAllPids();
+std::vector<ProcessInfo::PtrT> getAllProcesses();
+
 
 }
 

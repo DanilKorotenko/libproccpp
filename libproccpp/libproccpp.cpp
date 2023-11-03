@@ -11,9 +11,9 @@
 namespace libproccpp
 {
 
-std::vector<pid_t> getAllPids()
+std::vector<ProcessInfo::PtrT> getAllProcesses()
 {
-    std::vector<pid_t> result;
+    std::vector<ProcessInfo::PtrT> result;
 
     int pid_count = proc_listallpids(NULL, 0);
     if (pid_count > 0)
@@ -24,7 +24,10 @@ std::vector<pid_t> getAllPids()
             pid_count = proc_listallpids(pids, sizeof(pid_t) * pid_count);
             if (pid_count > 0)
             {
-                result = std::vector<pid_t>(pids, pids + pid_count);
+                for (int i = 0; i < pid_count; i++)
+                {
+                    result.push_back(ProcessInfo::PtrT(new ProcessInfo(pids[i])));
+                }
             }
             free(pids);
         }

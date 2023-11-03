@@ -13,10 +13,15 @@ int main(int argc, const char * argv[])
 {
     std::cout << "Hello, libprccpp!" << std::endl;
 
-    std::vector<pid_t> allPids = libproccpp::getAllPids();
+    std::vector<libproccpp::ProcessInfo::PtrT> allPids = libproccpp::getAllProcesses();
 
     std::cout << "Processes count: " << allPids.size() << std::endl;
 
+    for (libproccpp::ProcessInfo::PtrT procInfo: allPids)
+    {
+        std::cout << "Process: " << procInfo->getPid() << std::endl;
+
+    }
 
     return 0;
 }
