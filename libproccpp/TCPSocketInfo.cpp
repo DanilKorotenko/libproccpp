@@ -58,12 +58,12 @@ std::string TCPSocketInfo::getStateString()
 
 int TCPSocketInfo::getLocalPort()
 {
-    return _tcpInfo.tcpsi_ini.insi_lport;
+    return (int)ntohs(_tcpInfo.tcpsi_ini.insi_lport);
 }
 
 int TCPSocketInfo::getForeignPort()
 {
-    return _tcpInfo.tcpsi_ini.insi_fport;
+    return (int)ntohs(_tcpInfo.tcpsi_ini.insi_fport);
 }
 
 

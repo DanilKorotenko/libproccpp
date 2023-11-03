@@ -19,7 +19,10 @@ int main(int argc, const char * argv[])
 
     std::cout << "PID" << "\t\t"
         << "kind" << "\t"
-        << "state" << "\t" << std::endl;
+        << "state" << "\t"
+        << "localPort" << "\t"
+        << "foreignPort" << "\t"
+        << std::endl;
 
     for (libproccpp::ProcessInfo::PtrT procInfo: allPids)
     {
@@ -34,7 +37,10 @@ int main(int argc, const char * argv[])
                 {
                     std::cout << procInfo->getPid() << "\t"
                         << "tcp" << "\t\t"
-                        << tcpInfo->getStateString() << "\t" << std::endl;
+                        << tcpInfo->getStateString() << "\t"
+                        << tcpInfo->getLocalPort() << "\t"
+                        << tcpInfo->getForeignPort() << "\t"
+                        << std::endl;
 
                 }
 
