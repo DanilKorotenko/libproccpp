@@ -17,4 +17,14 @@ FileDescriptorInfo::FileDescriptorInfo(struct proc_fdinfo aFdInfo)
 
 }
 
+FileDescriptorInfo::FileDescriptorType FileDescriptorInfo::getType()
+{
+    return static_cast<FileDescriptorInfo::FileDescriptorType>(_fdInfo.proc_fdtype);
+}
+
+bool FileDescriptorInfo::isSocket()
+{
+    return this->getType() == FileDescriptorInfo::FileDescriptorType::SOCKET;
+}
+
 } // namespace libproccpp
