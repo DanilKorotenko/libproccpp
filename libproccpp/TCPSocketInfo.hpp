@@ -37,12 +37,22 @@ public:
         , RESERVED =      TSI_S_RESERVED          // 11      /* pseudo state: reserved */
     };
 
+    enum class TCPSocketType
+    {
+        IPv4 = 0
+        , IPv6
+    };
+
     TCPSocketInfo(struct tcp_sockinfo aTcpInfo);
+
+    TCPSocketType getType();
+    bool isIPv4();
 
     TCPSocketState getState();
     std::string getStateString();
 
-//    int getPort();
+    int getLocalPort();
+    int getForeignPort();
 
 private:
     struct tcp_sockinfo _tcpInfo;

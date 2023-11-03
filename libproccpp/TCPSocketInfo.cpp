@@ -16,6 +16,20 @@ TCPSocketInfo::TCPSocketInfo(struct tcp_sockinfo aTcpInfo)
 
 }
 
+TCPSocketInfo::TCPSocketType TCPSocketInfo::getType()
+{
+    if (_tcpInfo.tcpsi_ini.insi_vflag == INI_IPV4)
+    {
+        return TCPSocketType::IPv4;
+    }
+    return TCPSocketType::IPv6;
+}
+
+bool TCPSocketInfo::isIPv4()
+{
+    return this->getType() == TCPSocketType::IPv4;
+}
+
 TCPSocketInfo::TCPSocketState TCPSocketInfo::getState()
 {
     return static_cast<TCPSocketState>(_tcpInfo.tcpsi_state);
@@ -42,10 +56,15 @@ std::string TCPSocketInfo::getStateString()
 }
 
 
-//int TCPSocketInfo::getPort()
-//{
-//    return _tcpInfo;
-//}
+int TCPSocketInfo::getLocalPort()
+{
+    return _tcpInfo.tcpsi_ini.insi_lport;
+}
+
+int TCPSocketInfo::getForeignPort()
+{
+    return _tcpInfo.tcpsi_ini.insi_fport;
+}
 
 
 } // namespace libproccpp
