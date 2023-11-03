@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA3DBB7D2AF5051200AAD4B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3DBB7C2AF5051200AAD4B4 /* main.cpp */; };
+		DA3DBB8A2AF5060400AAD4B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3DBB892AF5060400AAD4B4 /* main.cpp */; };
+		DA3DBB902AF5062A00AAD4B4 /* libproccpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3DBB8E2AF5062A00AAD4B4 /* libproccpp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DA3DBB772AF5051200AAD4B4 /* CopyFiles */ = {
+		DA3DBB852AF5060400AAD4B4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DA3DBB792AF5051200AAD4B4 /* libproccpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libproccpp; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA3DBB7C2AF5051200AAD4B4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DA3DBB872AF5060400AAD4B4 /* testlibproccpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testlibproccpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3DBB892AF5060400AAD4B4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DA3DBB8E2AF5062A00AAD4B4 /* libproccpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = libproccpp.cpp; sourceTree = "<group>"; };
+		DA3DBB8F2AF5062A00AAD4B4 /* libproccpp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = libproccpp.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DA3DBB762AF5051200AAD4B4 /* Frameworks */ = {
+		DA3DBB842AF5060400AAD4B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3DBB7B2AF5051200AAD4B4 /* libproccpp */,
+				DA3DBB882AF5060400AAD4B4 /* testlibproccpp */,
 				DA3DBB7A2AF5051200AAD4B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,7 +53,7 @@
 		DA3DBB7A2AF5051200AAD4B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA3DBB792AF5051200AAD4B4 /* libproccpp */,
+				DA3DBB872AF5060400AAD4B4 /* testlibproccpp */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,29 +61,38 @@
 		DA3DBB7B2AF5051200AAD4B4 /* libproccpp */ = {
 			isa = PBXGroup;
 			children = (
-				DA3DBB7C2AF5051200AAD4B4 /* main.cpp */,
+				DA3DBB8E2AF5062A00AAD4B4 /* libproccpp.cpp */,
+				DA3DBB8F2AF5062A00AAD4B4 /* libproccpp.hpp */,
 			);
 			path = libproccpp;
+			sourceTree = "<group>";
+		};
+		DA3DBB882AF5060400AAD4B4 /* testlibproccpp */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DBB892AF5060400AAD4B4 /* main.cpp */,
+			);
+			path = testlibproccpp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA3DBB782AF5051200AAD4B4 /* libproccpp */ = {
+		DA3DBB862AF5060400AAD4B4 /* testlibproccpp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA3DBB802AF5051200AAD4B4 /* Build configuration list for PBXNativeTarget "libproccpp" */;
+			buildConfigurationList = DA3DBB8D2AF5060400AAD4B4 /* Build configuration list for PBXNativeTarget "testlibproccpp" */;
 			buildPhases = (
-				DA3DBB752AF5051200AAD4B4 /* Sources */,
-				DA3DBB762AF5051200AAD4B4 /* Frameworks */,
-				DA3DBB772AF5051200AAD4B4 /* CopyFiles */,
+				DA3DBB832AF5060400AAD4B4 /* Sources */,
+				DA3DBB842AF5060400AAD4B4 /* Frameworks */,
+				DA3DBB852AF5060400AAD4B4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = libproccpp;
-			productName = libproccpp;
-			productReference = DA3DBB792AF5051200AAD4B4 /* libproccpp */;
+			name = testlibproccpp;
+			productName = testlibproccpp;
+			productReference = DA3DBB872AF5060400AAD4B4 /* testlibproccpp */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +104,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					DA3DBB782AF5051200AAD4B4 = {
+					DA3DBB862AF5060400AAD4B4 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
@@ -109,17 +122,18 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA3DBB782AF5051200AAD4B4 /* libproccpp */,
+				DA3DBB862AF5060400AAD4B4 /* testlibproccpp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DA3DBB752AF5051200AAD4B4 /* Sources */ = {
+		DA3DBB832AF5060400AAD4B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA3DBB7D2AF5051200AAD4B4 /* main.cpp in Sources */,
+				DA3DBB8A2AF5060400AAD4B4 /* main.cpp in Sources */,
+				DA3DBB902AF5062A00AAD4B4 /* libproccpp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +255,7 @@
 			};
 			name = Release;
 		};
-		DA3DBB812AF5051200AAD4B4 /* Debug */ = {
+		DA3DBB8B2AF5060400AAD4B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -251,7 +265,7 @@
 			};
 			name = Debug;
 		};
-		DA3DBB822AF5051200AAD4B4 /* Release */ = {
+		DA3DBB8C2AF5060400AAD4B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -273,11 +287,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA3DBB802AF5051200AAD4B4 /* Build configuration list for PBXNativeTarget "libproccpp" */ = {
+		DA3DBB8D2AF5060400AAD4B4 /* Build configuration list for PBXNativeTarget "testlibproccpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA3DBB812AF5051200AAD4B4 /* Debug */,
-				DA3DBB822AF5051200AAD4B4 /* Release */,
+				DA3DBB8B2AF5060400AAD4B4 /* Debug */,
+				DA3DBB8C2AF5060400AAD4B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

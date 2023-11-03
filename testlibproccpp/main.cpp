@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  libproccpp
+//  testlibproccpp
 //
 //  Created by Danil Korotenko on 11/3/23.
 //
