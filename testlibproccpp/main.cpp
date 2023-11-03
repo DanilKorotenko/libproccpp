@@ -7,8 +7,16 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include "../libproccpp/libproccpp.hpp"
+
+int main(int argc, const char * argv[])
+{
+    std::cout << "Hello, libprccpp!" << std::endl;
+
+    std::vector<pid_t> allPids = libproccpp::getAllPids();
+
+    std::cout << "Processes count: " << allPids.size() << std::endl;
+
+
     return 0;
 }

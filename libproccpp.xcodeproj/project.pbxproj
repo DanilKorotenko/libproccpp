@@ -28,6 +28,7 @@
 		DA3DBB892AF5060400AAD4B4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DA3DBB8E2AF5062A00AAD4B4 /* libproccpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = libproccpp.cpp; sourceTree = "<group>"; };
 		DA3DBB8F2AF5062A00AAD4B4 /* libproccpp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = libproccpp.hpp; sourceTree = "<group>"; };
+		DA4509382AF50CB8000815B5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		DA3DBB702AF5051200AAD4B4 = {
 			isa = PBXGroup;
 			children = (
+				DA4509382AF50CB8000815B5 /* README.md */,
 				DA3DBB7B2AF5051200AAD4B4 /* libproccpp */,
 				DA3DBB882AF5060400AAD4B4 /* testlibproccpp */,
 				DA3DBB7A2AF5051200AAD4B4 /* Products */,

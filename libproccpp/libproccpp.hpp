@@ -9,5 +9,13 @@
 #define libproccpp_hpp
 
 #include <stdio.h>
+#include <vector>
+
+namespace libproccpp
+{
+
+std::vector<pid_t> getAllPids();
+
+}
 
 #endif /* libproccpp_hpp */
