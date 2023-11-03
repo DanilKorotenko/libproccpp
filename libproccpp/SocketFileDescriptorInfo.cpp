@@ -26,4 +26,15 @@ bool SocketFileDescriptorInfo::isTCP()
     return this->getKind() == SocketInfoKind::TCP;
 }
 
+TCPSocketInfo::PtrT SocketFileDescriptorInfo::getTCPSocketInfo()
+{
+    if (!this->isTCP())
+    {
+        return nullptr;
+    }
+
+    TCPSocketInfo::PtrT result = TCPSocketInfo::PtrT(new TCPSocketInfo(_socketInfo.psi.soi_proto.pri_tcp));
+    return result;
+}
+
 } // namespace libproccpp

@@ -12,6 +12,8 @@
 #include <memory>
 #include <libproc.h>
 
+#include "TCPSocketInfo.hpp"
+
 namespace libproccpp
 {
 
@@ -20,6 +22,18 @@ class SocketFileDescriptorInfo
 public:
     typedef std::shared_ptr<SocketFileDescriptorInfo> PtrT;
 
+/*
+accordingly to xnu/bsd/kern/socket_info.c
+
+GENERIC  - default kind. It seems that socket info is empty
+IN      - PF_INET or PF_INET6 socket
+TCP     - SOCK_STREAM or IPPROTO_TCP socket. Is a podclass of IN socket.
+UN      -
+NDRV    -
+KERN_EVENT -
+KERN_CTL    -
+VSOCK       -
+*/
     enum class SocketInfoKind
     {
         GENERIC =   SOCKINFO_GENERIC        // = 0,
@@ -37,6 +51,7 @@ public:
     SocketInfoKind getKind();
 
     bool isTCP();
+    TCPSocketInfo::PtrT getTCPSocketInfo();
 
 private:
     struct socket_fdinfo _socketInfo;

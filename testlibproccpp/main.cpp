@@ -17,6 +17,10 @@ int main(int argc, const char * argv[])
 
     std::cout << "Processes count: " << allPids.size() << std::endl;
 
+    std::cout << "PID" << "\t\t"
+        << "kind" << "\t"
+        << "state" << "\t" << std::endl;
+
     for (libproccpp::ProcessInfo::PtrT procInfo: allPids)
     {
         std::vector<libproccpp::FileDescriptorInfo::PtrT> fileDescriptors = procInfo->getAllFileDescriptors();
@@ -25,7 +29,14 @@ int main(int argc, const char * argv[])
             libproccpp::SocketFileDescriptorInfo::PtrT socketInfo = fileDescriptorInfo->getSocketInfo();
             if (socketInfo)
             {
-                std::cout << procInfo->getPid() << "\t" << "socket" << std::endl;
+                libproccpp::TCPSocketInfo::PtrT tcpInfo = socketInfo->getTCPSocketInfo();
+                if (tcpInfo)
+                {
+                    std::cout << procInfo->getPid() << "\t"
+                        << "tcp" << "\t\t"
+                        << tcpInfo->getStateString() << "\t" << std::endl;
+
+                }
 
             }
         }

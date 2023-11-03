@@ -12,6 +12,7 @@
 		DA4509522AF516B0000815B5 /* FileDescriptorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA4509502AF516B0000815B5 /* FileDescriptorInfo.cpp */; };
 		DA4509552AF518EA000815B5 /* ProcessInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA4509532AF518EA000815B5 /* ProcessInfo.cpp */; };
 		DA45095E2AF52518000815B5 /* SocketFileDescriptorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA45095C2AF52518000815B5 /* SocketFileDescriptorInfo.cpp */; };
+		DA4509612AF5310B000815B5 /* TCPSocketInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA45095F2AF5310B000815B5 /* TCPSocketInfo.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		DA4509542AF518EA000815B5 /* ProcessInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ProcessInfo.hpp; sourceTree = "<group>"; };
 		DA45095C2AF52518000815B5 /* SocketFileDescriptorInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SocketFileDescriptorInfo.cpp; sourceTree = "<group>"; };
 		DA45095D2AF52518000815B5 /* SocketFileDescriptorInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SocketFileDescriptorInfo.hpp; sourceTree = "<group>"; };
+		DA45095F2AF5310B000815B5 /* TCPSocketInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TCPSocketInfo.cpp; sourceTree = "<group>"; };
+		DA4509602AF5310B000815B5 /* TCPSocketInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TCPSocketInfo.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				DA4509542AF518EA000815B5 /* ProcessInfo.hpp */,
 				DA45095C2AF52518000815B5 /* SocketFileDescriptorInfo.cpp */,
 				DA45095D2AF52518000815B5 /* SocketFileDescriptorInfo.hpp */,
+				DA45095F2AF5310B000815B5 /* TCPSocketInfo.cpp */,
+				DA4509602AF5310B000815B5 /* TCPSocketInfo.hpp */,
 			);
 			path = libproccpp;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				DA45095E2AF52518000815B5 /* SocketFileDescriptorInfo.cpp in Sources */,
 				DA4509552AF518EA000815B5 /* ProcessInfo.cpp in Sources */,
 				DA4509522AF516B0000815B5 /* FileDescriptorInfo.cpp in Sources */,
+				DA4509612AF5310B000815B5 /* TCPSocketInfo.cpp in Sources */,
 				DA3DBB902AF5062A00AAD4B4 /* libproccpp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

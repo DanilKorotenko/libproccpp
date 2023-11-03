@@ -37,7 +37,6 @@ public:
         , NEXUS =   PROX_FDTYPE_NEXUS       // 11
     };
 
-
     FileDescriptorInfo(struct proc_fdinfo aFdInfo, pid_t aParentPid);
 
     FileDescriptorType getType();
