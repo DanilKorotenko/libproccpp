@@ -16,4 +16,14 @@ SocketFileDescriptorInfo::SocketFileDescriptorInfo(struct socket_fdinfo aSocketI
 
 }
 
+SocketFileDescriptorInfo::SocketInfoKind SocketFileDescriptorInfo::getKind()
+{
+    return static_cast<SocketInfoKind>(_socketInfo.psi.soi_kind);
+}
+
+bool SocketFileDescriptorInfo::isTCP()
+{
+    return this->getKind() == SocketInfoKind::TCP;
+}
+
 } // namespace libproccpp
