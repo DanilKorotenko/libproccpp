@@ -41,9 +41,7 @@ int main(int argc, const char * argv[])
                         << tcpInfo->getLocalPort() << "\t"
                         << tcpInfo->getForeignPort() << "\t"
                         << std::endl;
-
                 }
-
             }
         }
     }

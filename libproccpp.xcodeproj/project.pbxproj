@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,15 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DA3DBB852AF5060400AAD4B4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		DAB39E722EA7CC3C00B7762A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -41,10 +50,22 @@
 		DA45095D2AF52518000815B5 /* SocketFileDescriptorInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SocketFileDescriptorInfo.hpp; sourceTree = "<group>"; };
 		DA45095F2AF5310B000815B5 /* TCPSocketInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TCPSocketInfo.cpp; sourceTree = "<group>"; };
 		DA4509602AF5310B000815B5 /* TCPSocketInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TCPSocketInfo.hpp; sourceTree = "<group>"; };
+		DAB39E742EA7CC3C00B7762A /* allProcessesInfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = allProcessesInfo; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DAB39E752EA7CC3C00B7762A /* allProcessesInfo */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = allProcessesInfo; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA3DBB842AF5060400AAD4B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB39E712EA7CC3C00B7762A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,6 +81,7 @@
 				DA4509382AF50CB8000815B5 /* README.md */,
 				DA3DBB7B2AF5051200AAD4B4 /* libproccpp */,
 				DA3DBB882AF5060400AAD4B4 /* testlibproccpp */,
+				DAB39E752EA7CC3C00B7762A /* allProcessesInfo */,
 				DA3DBB7A2AF5051200AAD4B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3DBB872AF5060400AAD4B4 /* testlibproccpp */,
+				DAB39E742EA7CC3C00B7762A /* allProcessesInfo */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +140,28 @@
 			productReference = DA3DBB872AF5060400AAD4B4 /* testlibproccpp */;
 			productType = "com.apple.product-type.tool";
 		};
+		DAB39E732EA7CC3C00B7762A /* allProcessesInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB39E7A2EA7CC3C00B7762A /* Build configuration list for PBXNativeTarget "allProcessesInfo" */;
+			buildPhases = (
+				DAB39E702EA7CC3C00B7762A /* Sources */,
+				DAB39E712EA7CC3C00B7762A /* Frameworks */,
+				DAB39E722EA7CC3C00B7762A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DAB39E752EA7CC3C00B7762A /* allProcessesInfo */,
+			);
+			name = allProcessesInfo;
+			packageProductDependencies = (
+			);
+			productName = allProcessesInfo;
+			productReference = DAB39E742EA7CC3C00B7762A /* allProcessesInfo */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -128,6 +173,9 @@
 				TargetAttributes = {
 					DA3DBB862AF5060400AAD4B4 = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					DAB39E732EA7CC3C00B7762A = {
+						CreatedOnToolsVersion = 26.0;
 					};
 				};
 			};
@@ -145,6 +193,7 @@
 			projectRoot = "";
 			targets = (
 				DA3DBB862AF5060400AAD4B4 /* testlibproccpp */,
+				DAB39E732EA7CC3C00B7762A /* allProcessesInfo */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +209,13 @@
 				DA4509522AF516B0000815B5 /* FileDescriptorInfo.cpp in Sources */,
 				DA4509612AF5310B000815B5 /* TCPSocketInfo.cpp in Sources */,
 				DA3DBB902AF5062A00AAD4B4 /* libproccpp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB39E702EA7CC3C00B7762A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +357,24 @@
 			};
 			name = Release;
 		};
+		DAB39E782EA7CC3C00B7762A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAB39E792EA7CC3C00B7762A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -318,6 +392,15 @@
 			buildConfigurations = (
 				DA3DBB8B2AF5060400AAD4B4 /* Debug */,
 				DA3DBB8C2AF5060400AAD4B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAB39E7A2EA7CC3C00B7762A /* Build configuration list for PBXNativeTarget "allProcessesInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB39E782EA7CC3C00B7762A /* Debug */,
+				DAB39E792EA7CC3C00B7762A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
